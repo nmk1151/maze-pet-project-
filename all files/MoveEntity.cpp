@@ -1,14 +1,14 @@
-#include "MoveEntity.h"//подключаем заголовочный файл 
+#include "MoveEntity.h" 
 
-MoveEntity::MoveEntity(Vector2f position, String imagePath) :	Entity(imagePath) {// конструктор класса 
-	setPosition(position);//задать позицию
+MoveEntity::MoveEntity(Vector2f position, String imagePath) :	Entity(imagePath) { 
+	setPosition(position);
 }
 
-void MoveEntity::setSpeed(Vector2f speed) {//задать скорость 
-	this->speed = speed;// задаём скорость 
+void MoveEntity::setSpeed(Vector2f speed) { 
+	this->speed = speed; 
 
 }
 
-Vector2f MoveEntity::getSpeed() {// получить скорость 
-	return speed;// получаем скорость 
+Vector2f MoveEntity::getSpeed() { 
+	return speed; 
 }

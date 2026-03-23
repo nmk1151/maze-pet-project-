@@ -1,26 +1,26 @@
-#pragma once// защита от повторного подключения
+#pragma once
 
-#include <SFML/Graphics.hpp> // подключение sfml
+#include <SFML/Graphics.hpp>  
 
 #include "MoveEntity.h"
 
-using namespace sf; // чтобы не писать sf::
+using namespace sf;  
 
-class Player : public MoveEntity { // создаем класс игрока  
-								   // унаследуем класс Player от MoveEntity
-private:// делаем метод init и его поля приватными 
+class Player : public MoveEntity {   
+								    
+private: 
 
 	int coins = 0;
 
 	String state = "start";
 
-	void init(); // задаются начальные параметры игрока 
+	void init();  
 
-	void dontMoveBehindMap();// игрок не сможет проходить за карту 
+	void dontMoveBehindMap(); 
 public:
 	float currentFrame = 0;
 
-	Player(Vector2f position, String imagePath); // конструктор
+	Player(Vector2f position, String imagePath); 
 
 	int getCoins();
 

@@ -1,19 +1,19 @@
-#include "Wall.h"// подключим Wall.h 
+#include "Wall.h" 
 
-void Wall::init() {// начальные параметры 
+void Wall::init() { 
 
-	width = 60;// ширина
+	width = 60;
 
-	height = 60;// высота
+	height = 60;
 
 }
 
 Wall::Wall(Vector2f position, String imagePath) : Entity(imagePath) {
 
-	init();// начальные параметры
+	init();
 
-	setPosition(position);// задать позицию
+	setPosition(position);
 
-	setName("wall");// задать имя
+	setName("wall");
 
 }

@@ -1,19 +1,19 @@
-#pragma once //подключаем защитника 
+#pragma once  
 
-#include <SFML/Graphics.hpp>// подключаем sfml 
+#include <SFML/Graphics.hpp> 
 
-#include "Entity.h"// подключаем Entity 
+#include "Entity.h" 
 
-using namespace sf;// используем sf 
+using namespace sf;  
 
-class Floor : public Entity {// объ€вл€ем класс Floor 
+class Floor : public Entity {
 
-private:// приватный модификатор доступа
+private:
 
-	void init();// начальные параметры
+	void init();
 
-public:// публичный модификатор доступа
+public:
 
-	Floor(Vector2f position, String imagePath);// конструктор
+	Floor(Vector2f position, String imagePath);
 
 };

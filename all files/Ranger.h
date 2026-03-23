@@ -1,40 +1,40 @@
-#pragma once //подключаем защитника 
+#pragma once  
 
-#include <SFML/Graphics.hpp>  // подключаем sfml 
+#include <SFML/Graphics.hpp>   sfml 
 
-#include "Entity.h"  // подключаем Entity 
+#include "Entity.h"   Entity 
 
-#include<iostream>  // подключаем iostream
+#include<iostream>   iostream
 
-#include<list>  // подключаем list 
+#include<list>   list 
 
-#include "Arrow.h"  // подключаем заголовочный файл стрелы
+#include "Arrow.h"  
 
-using namespace sf;  // используем sf
+using namespace sf;   sf
 
-using namespace std;  // используем std 
+using namespace std;   std 
 
-class Ranger : public Entity {  // объ€вл€ем класс Ranger
-private:  // приватный модификатор доступа
-	bool isShot = false;  // стрела не готова к выстрелу 
+class Ranger : public Entity {   Ranger
+private:  
+	bool isShot = false;   
 
 	Arrow* arrow;
 
-	float currentFrame = 4;  // текуща€ картинка 
+	float currentFrame = 4;   
 
-	void init();  // начальные параметры
+	void init();  
 
-	void animation();  // анимаци€ 
+	void animation();   
 
-	void shoot();  // выстрел 
+	void shoot();   
 
-public:  // публичный модификатор доступа 
+public:   
 
-	Ranger(Vector2f position, String imagePath);  // конструктор 
+	Ranger(Vector2f position, String imagePath);   
 
-	void collision(list<Entity*> entities);  //столкновени€ стрелы 
+	void collision(list<Entity*> entities);   
 
-	void update();  // обновление 
+	void update();   
 
-	Arrow* getArrow();  // получить стрелу
+	Arrow* getArrow();  
 };

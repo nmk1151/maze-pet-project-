@@ -4,27 +4,27 @@
 
 #include "Player.h"
 
-#include "Money.h"//подключаем заголовочный файл монетки 
+#include "Money.h" 
 
-#include "Wall.h"// подключим Wall.h 
+#include "Wall.h" 
 
-#include "Floor.h"// подключим Floor.h
+#include "Floor.h" 
 
 #include "Ranger.h"
 
-#include<list>// подключим лист
+#include<list>
 
 using namespace sf;
 
-using namespace std;// используем пространство имён std 
+using namespace std; 
 
 const int WINDOW_WIDTH = 1260;
 
 const int WINDOW_HEIGHT = 720;
 
-const int WIDTH_MAP = 21;//размер карты ширина
+const int WIDTH_MAP = 21;
 
-const int HEIGHT_MAP = 12;//размер карты высота 
+const int HEIGHT_MAP = 12; 
 
 class Map {
 public:
@@ -55,7 +55,7 @@ private:
 
 	Player* player;
 
-	list<Entity*> entities;// список указателей на класс Entity 
+	list<Entity*> entities; 
 
 	void init();
 };

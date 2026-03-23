@@ -1,26 +1,26 @@
-#include "Arrow.h"  // подключим заголовочный файл Arrow.h
-void Arrow::init() {  // начальные параметры 
+#include "Arrow.h"   Arrow.h
+void Arrow::init() {   
 
-	width = 47;  // ширина
-	height = 22;  // высота
+	width = 47;  
+	height = 22;  
 }
 
-// конструктор
+
 
 Arrow::Arrow(Vector2f position, String imagePath) : MoveEntity(position, imagePath) {
 
-	init();  // начальные параметры
+	init();  
 
-	setName("arrow");  // задать имя
+	setName("arrow");  
 
-	setSpeed(Vector2f(-2, 0));  // задать скорость
+	setSpeed(Vector2f(-2, 0));  
 
 }
 
-void Arrow::update() {  // обновить 
+void Arrow::update() {   
 
-	sprite.move(speed.x, speed.y);  // подвигать спрайт
+	sprite.move(speed.x, speed.y);  
 
-	position = sprite.getPosition();  // обновить позицию
+	position = sprite.getPosition();  
 
 }

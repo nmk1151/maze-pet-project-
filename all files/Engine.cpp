@@ -1,7 +1,7 @@
-#include "Engine.h"// подключаем заголовочный файл
+#include "Engine.h"
 
 
-Engine::Engine() {// определяем конcтруктор
+Engine::Engine() {
 
 	init();
 
@@ -9,9 +9,9 @@ Engine::Engine() {// определяем конcтруктор
 
 void Engine::draw() {
 
-	window.clear(Color(0, 255, 0));// зелёный фон
+	window.clear(Color(0, 255, 0));
 
-	window.setView(camera->getView());//задаём игровому окну камеру
+	window.setView(camera->getView());
 
 	map.draw(window);
 
@@ -56,50 +56,50 @@ void Engine::draw() {
 	}
 	window.draw(text);
 
-	window.display(); // отображаем на окне
+	window.display(); 
 
 }
 
 void Engine::update() {
 
-	pressedAction.action();//вызываем метод action объекта pressedAction.
+	pressedAction.action(); 
 
-	map.update();// обновляем карту
+	map.update();
 
-	camera->update();// обновляем камеру 
+	camera->update(); 
 
 }
 
 
-void Engine::init() {//функция загрузки компонентов игры
+void Engine::init() {
 
 	window.create(sf::VideoMode(1260, 720), "Game");
-	window.setFramerateLimit(60);// ограничим fps игры 
+	window.setFramerateLimit(60); 
 	pressedAction.setPlayer(map.getPlayer());
-	camera = new Camera(map.getPlayer());// создаём игровую камеру
+	camera = new Camera(map.getPlayer());
 }
 
-void Engine::loop() {// функция игрового цикла
+void Engine::loop() {
 
-	while (window.isOpen())// игровой цикл
+	while (window.isOpen())
 
 	{
 
-		Event event;// события которые происходят в игре
+		Event event;
 
-		while (window.pollEvent(event))// проверяем события
+		while (window.pollEvent(event))
 
 		{
 
 			if (event.type == Event::Closed) {
 
-				window.close();// закрыть окно
+				window.close();
 
 			}
 
 		}
-		draw(); // рисуем
-		update();// обновляем игру
+		draw(); 
+		update();
 	}
 
 }

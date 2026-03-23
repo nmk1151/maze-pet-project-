@@ -1,26 +1,26 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Player.h" 
-const int LEFT_BORDER = 400;// граница камеры слева 
-const int RIGHT_BORDER = 860;// граница камеры справа 
-const int UP_BORDER = 250;// граница камеры сверху 
-const int DOWN_BORDER = 470;//граница камеры снизу 
+const int LEFT_BORDER = 400; 
+const int RIGHT_BORDER = 860; 
+const int UP_BORDER = 250; 
+const int DOWN_BORDER = 470; 
 
-class Camera {// класс игровой камеры 
+class Camera { 
 private:
 
-	View view;//объект View из sfml для работы с камерой 
+	View view; 
 
-	Player* player;// создание указателя на игрока 
+	Player* player; 
 
-	void setCenter();// концентрация внимания камеры на игроке 
+	void setCenter(); 
 
-	void init();//начальные настройки камеры 
+	void init(); 
 
 public:
-	Camera(Player* player);//конструктор камеры, принимающий указатель на объект игрока 
+	Camera(Player* player); 
 
-	void update();// обновление камеры
+	void update();
 
-	View getView();// получить объект класса View из sfml. 
+	View getView(); 
 };

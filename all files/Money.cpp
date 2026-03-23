@@ -1,20 +1,20 @@
-#include "Money.h"// подключение заголовочного файла монетки 
+#include "Money.h" 
 
-Money::Money(Vector2f position, String imagePath) : Entity(imagePath) {//конструктор класса 
+Money::Money(Vector2f position, String imagePath) : Entity(imagePath) { 
 
-	init();// метод задающий начальные параметры 
+	init(); 
 
-	setPosition(position);//метод задающий позицию 
+	setPosition(position); 
 
-	setName("money");// задаём имя
+	setName("money");
 
 }
 
-void Money::init() {// начальные параметры монетки. 
+void Money::init() {. 
 
-	width = 32;// ширина монетки
+	width = 32;
 
-	height = 32;// высота монетки
+	height = 32;
 
 }
 

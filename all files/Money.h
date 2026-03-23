@@ -1,18 +1,18 @@
-#pragma once// защита от повторного подключения 
+#pragma once 
 
-#include <SFML/Graphics.hpp>//подключение sfml 
+#include <SFML/Graphics.hpp> 
 
 #include "Entity.h"
 
-using namespace sf;//использование пространства имён sf 
+using namespace sf; 
 
-class Money : public Entity {// наследуем класс Money от Entity  {//класс монетки 
-private://приватный блок 
+class Money : public Entity { 
+private: 
 
-	void init();//начальные значения монетки 
+	void init(); 
 
-public://публичный блок 
+public: 
 
-	Money(Vector2f position, String imagePath);//конструктор класса 
+	Money(Vector2f position, String imagePath); 
 
 };

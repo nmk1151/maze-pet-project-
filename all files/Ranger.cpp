@@ -1,30 +1,28 @@
-#include "Ranger.h"  // подключим заголовочный файл Ranger.h
-void Ranger::init() {  // начальные параметры
-	width = 60;  // ширина
-	height = 55;  // высота
+#include "Ranger.h"   
+void Ranger::init() {  
+	width = 60;  
+	height = 55;  
 }
-
-// задать начальные параметры
 
 Ranger::Ranger(Vector2f position, String imagePath) : Entity(imagePath) {
 	init();
-	setPosition(position);  // задать позицию
-	setName("ranger");  // задать имя 
-	arrow = new Arrow(Vector2f(position.x - width, position.y + 20), "images/arrow.png");  // создать стрелу 
-	setTextureRect(IntRect(0, 0, width, height));  // задаём текстуру
-	sprite.setScale(-1, 1);  // поворачиваем наш набор спрайтов
+	setPosition(position);  
+	setName("ranger");   
+	arrow = new Arrow(Vector2f(position.x - width, position.y + 20), "images/arrow.png");   
+	setTextureRect(IntRect(0, 0, width, height));  
+	sprite.setScale(-1, 1);  
 }
 
-Arrow* Ranger::getArrow() {  // получить указатель на объект стрелы
-	return arrow;  // получаем стрелу
+Arrow* Ranger::getArrow() {  
+	return arrow;  
 }
 
-void Ranger::animation() {  // анимация 
+void Ranger::animation() {   
 	currentFrame += 0.02;
 	setTextureRect(IntRect(int(currentFrame) * width, 0, width, height));
 }
 
-void Ranger::shoot() {  // выстрел 
+void Ranger::shoot() {   
 	if (!isShot) {
 		if (currentFrame >= 4) {
 			arrow->setPosition(Vector2f(position.x - width, position.y + 20));
@@ -42,11 +40,11 @@ void Ranger::shoot() {  // выстрел
 	}
 }
 
-void Ranger::update() {  // обновление 
+void Ranger::update() {   
 	shoot();
 }
 
-void Ranger::collision(list<Entity*> entities) {  //столкновение стрелы 
+void Ranger::collision(list<Entity*> entities) {   
 	FloatRect arrowCollider = arrow->getSprite().getGlobalBounds();
 	for (auto it = entities.begin(); it != entities.end(); it++) {
 

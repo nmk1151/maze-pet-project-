@@ -10,11 +10,11 @@ class KeyPressedAction {
 
 private:
 
-	Player* player;//указатель на объект класса Player 
+	Player* player; 
 
 public:
 
 	KeyPressedAction();
 	void setPlayer(Player* player);
-	void action();//функция отвечающая за движение 
+	void action(); 
 };

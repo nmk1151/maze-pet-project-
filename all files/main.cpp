@@ -1,9 +1,9 @@
-#include "Engine.h"// подключаем заголовочный файл
+#include "Engine.h"
 
-int main() {// точка входа в нашу программу
+int main() {
 
-	Engine engine;// созданием объекта класса Engine
+	Engine engine; 
 
-	engine.loop();// запуск игрового цикл
+	engine.loop();
 
 }

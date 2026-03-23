@@ -1,4 +1,4 @@
-#include "Entity.h"// подключение заголовочного файла сущности
+#include "Entity.h"
 
 Entity::Entity(String imagePath) {
 
@@ -8,86 +8,86 @@ Entity::Entity(String imagePath) {
 
 }
 
-void Entity::init() {// начальные параметры
+void Entity::init() {
 
-	Image image;//создаем объект изображения
+	Image image;
 
-	image.loadFromFile(imagePath);//загружаем картинку
+	image.loadFromFile(imagePath);
 
-	texture.loadFromImage(image);//загружаем текстуру из изображения
+	texture.loadFromImage(image);
 
-	sprite.setTexture(texture);//задаём спрайту текстуру
-
-}
-
-void Entity::setPosition(Vector2f position) {// задать позицию 
-
-	this->position = position;// задаём позицию игровой сущности
-
-	sprite.setPosition(position.x, position.y);//задать позицию спрайту
+	sprite.setTexture(texture);
 
 }
 
-void Entity::setTextureRect(IntRect rect) {//задать текстуру 
+void Entity::setPosition(Vector2f position) { 
 
-	sprite.setTextureRect(rect);//задаём спрайту текстуру
+	this->position = position;
 
-}
-
-void Entity::setWidth(int width) {//задать ширину 
-
-	this->width = width;//задаём ширину игровой сущности
+	sprite.setPosition(position.x, position.y);
 
 }
 
-void Entity::setHeight(int height) {// задать высоту 
+void Entity::setTextureRect(IntRect rect) { 
 
-	this->height = height;//задаём высоту игровой сущности
-
-}
-
-void Entity::setImagePath(String imagePath) {// задать путь к картинке 
-
-	this->imagePath = imagePath;// задать путь к картинке игровой сущности
+	sprite.setTextureRect(rect);
 
 }
 
-void Entity::setName(String name) {// задать имя 
-	this->name = name;//задаём имя
-}
+void Entity::setWidth(int width) { 
 
-Vector2f Entity::getPosition() {// получить позицию 
-
-	return sprite.getPosition();// получаем позицию
+	this->width = width;
 
 }
 
-Sprite Entity::getSprite() {// получить спрайт 
+void Entity::setHeight(int height) { 
 
-	return sprite;// получаем спрайт
-
-}
-
-int Entity::getWidth() {// получить ширину 
-
-	return width;// получаем ширину
+	this->height = height;
 
 }
 
-int Entity::getHeight() {// получить высоту 
+void Entity::setImagePath(String imagePath) { 
 
-	return height;// получаем высоту
-
-}
-
-String Entity::getImagePath() {// получить путь к картинке 
-
-	return imagePath;// получаем путь к картинке
+	this->imagePath = imagePath;
 
 }
 
-String Entity::getName() {// получить имя 
-	return name;// получаем имя
+void Entity::setName(String name) { 
+	this->name = name;
+}
+
+Vector2f Entity::getPosition() { 
+
+	return sprite.getPosition();
+
+}
+
+Sprite Entity::getSprite() { 
+
+	return sprite;
+
+}
+
+int Entity::getWidth() { 
+
+	return width;
+
+}
+
+int Entity::getHeight() { 
+
+	return height;
+
+}
+
+String Entity::getImagePath() { 
+
+	return imagePath;
+
+}
+
+String Entity::getName() { 
+	return name;
 }
 
 void Entity::update() {

@@ -1,15 +1,15 @@
-#pragma once// подключаем защитника 
-#include <SFML/Graphics.hpp>// подключаем sfml 
-#include "Entity.h"// подключаем Entity 
-using namespace sf;// используем sf 
+#pragma once 
+#include <SFML/Graphics.hpp> 
+#include "Entity.h" 
+using namespace sf;  
 
-class Wall : public Entity {// наследуем класс Wall от Entity 
+class Wall : public Entity { 
 
-private:// приватный модификатор 
+private: 
 
-	void init();// начальные параметры 
-public:// публичный модификатор доступа
+	void init(); 
+public:
 
-	Wall(Vector2f position, String imagePath);// конструктор
+	Wall(Vector2f position, String imagePath);
 
 };

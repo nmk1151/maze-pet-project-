@@ -7,20 +7,20 @@ Player::Player(Vector2f position, String imagePath) : MoveEntity(position, image
 
 	init();
 
-	setPosition(position);// задать позицию 
+	setPosition(position); 
 
-	setName("player");// задаём имя
+	setName("player");
 
 }
 void Player::init() {
 
-	width = 80;// задать ширину 
+	width = 80; 
 
-	height = 120;// задать высоту 
+	height = 120; 
 
-	setSpeed(Vector2f(0, 0));// задать скорость 
+	setSpeed(Vector2f(0, 0)); 
 
-	setTextureRect(IntRect(0, 0, 80, 120)); //первый спрайт из набора
+	setTextureRect(IntRect(0, 0, 80, 120)); 
 
 }
 
@@ -29,38 +29,38 @@ void Player::init() {
 void Player::update() {
 	sprite.move(speed.x, speed.y);
 	position = sprite.getPosition();
-	dontMoveBehindMap();// не давать игроку зайти за пределы карты
+	dontMoveBehindMap();
 }
-void Player::dontMoveBehindMap() {// ограничить движение игрока за пределами карты
+void Player::dontMoveBehindMap() {
 
-	if (position.x > WINDOW_WIDTH - width) {// если вышел за пределы справа
+	if (position.x > WINDOW_WIDTH - width) {
 
-		position.x = WINDOW_WIDTH - width;// задать позицию так чтобы не вышел за экран.
+		position.x = WINDOW_WIDTH - width;.
 
-		setPosition(Vector2f(position.x, position.y));// фиксируем изменения.
-
-	}
-	if (position.x < 0) {// если позиция игрока по x меньше 0
-
-		position.x = 0;// задать позицию по x=0
-
-		setPosition(Vector2f(position.x, position.y));//зафиксировать изменения
+		setPosition(Vector2f(position.x, position.y));.
 
 	}
+	if (position.x < 0) { 0
 
-	if (position.y < 0) {// если позиция по y меньше 0
+		position.x = 0; x=0
 
-		position.y = 0;// задать позицию по y = 0
-
-		setPosition(Vector2f(position.x, position.y));// зафиксировать изменения
+		setPosition(Vector2f(position.x, position.y));
 
 	}
 
-	if (position.y > WINDOW_HEIGHT - height) {// если вышел за пределы сверху
+	if (position.y < 0) { 0
 
-		position.y = WINDOW_HEIGHT - height;// задать позицию так чтобы остановился и не выходил за границы
+		position.y = 0; y = 0
 
-		setPosition(Vector2f(position.x, position.y));// зафиксировать изменения
+		setPosition(Vector2f(position.x, position.y));
+
+	}
+
+	if (position.y > WINDOW_HEIGHT - height) {
+
+		position.y = WINDOW_HEIGHT - height;
+
+		setPosition(Vector2f(position.x, position.y));
 
 	}
 }

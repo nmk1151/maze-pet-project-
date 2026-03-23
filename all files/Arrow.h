@@ -1,4 +1,4 @@
-#pragma once// подключение защитника
+#pragma once
 
 #include <SFML/Graphics.hpp>
 
@@ -6,16 +6,16 @@
 
 using namespace sf;
 
-class Arrow : public MoveEntity {  // класс стрелы
+class Arrow : public MoveEntity {  
 
-private:  // приватный модификатор 
+private:   
 
-	void init();  // начальные параметры 
+	void init();   
 
-public:  // публичный модификатор 
+public:   
 
-	Arrow(Vector2f position, String imagePath);  // конструктор 
+	Arrow(Vector2f position, String imagePath);   
 
-	void update();  // обновление
+	void update();  
 
 };

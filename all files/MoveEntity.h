@@ -1,21 +1,21 @@
-#pragma once// подключаем защитника 
+#pragma once 
 
-#include <SFML/Graphics.hpp>// подключение sfml 
+#include <SFML/Graphics.hpp> 
 
 #include "Entity.h"
 
-using namespace sf;//использование пространства имён sf
+using namespace sf; 
 
-class MoveEntity : public Entity {//класс потомок Entity 
+class MoveEntity : public Entity { 
 
-protected:// модификатор с доступом только для наследников 
+protected: 
 
-	Vector2f speed;// скорость 
+	Vector2f speed; 
 
-public:// публичный модификатор доступа
+public:
 
-	MoveEntity(Vector2f position, String imagePath);// конструктор класса 
-	void setSpeed(Vector2f speed);// задать скорость
-	Vector2f getSpeed();// получить скорость
+	MoveEntity(Vector2f position, String imagePath); 
+	void setSpeed(Vector2f speed);
+	Vector2f getSpeed();
 
 };

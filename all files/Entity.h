@@ -1,33 +1,34 @@
-#pragma once // подключаем защитника 
-#include <SFML/Graphics.hpp>// подключение sfml 
-using namespace sf;// использование пространства имён sf 
-class Entity {// базовый класс игровой сущности 
+#pragma once  
+#include <SFML/Graphics.hpp>  
+using namespace sf; 
 
-protected:// модификатор с доступом только для наследников 
+class Entity { 
 
-	Vector2f position;//позиция игровой сущности 
-	Sprite sprite;// спрайт игровой сущности
-	Texture texture;// текстура игровой сущности 
-	int width;// ширина игровой сущности 
-	int height;// высота игровой сущности
-	String imagePath;// путь к картинке 
-	String name;// название игровой сущности 
-	virtual void init();// задаёт начальные параметры игровой сущности 
+protected: 
 
-public://публичный модификатор доступа
+	Vector2f position; 
+	Sprite sprite;
+	Texture texture; 
+	int width; 
+	int height;
+	String imagePath; 
+	String name; 
+	virtual void init(); 
 
-	Entity(String imagePath);// конструктор класса 
+public:
+
+	Entity(String imagePath); 
 	virtual void update();
-	void setPosition(Vector2f position);// задать позицию игровой сущности 
-	void setTextureRect(IntRect rect);//задать текстуру игровой сущности 
-	void setWidth(int width);// задать ширину игровой сущности
-	void setHeight(int height);//задать высоту игровой сущности 
-	void setImagePath(String imagePath);// задать путь к картинке игровой сущности 
-	void setName(String name);// задать имя
-	Vector2f getPosition();// получить позицию игровой сущности 
-	Sprite getSprite();// получить спрайт игровой сущности
-	int getWidth();// получить ширину игровой сущности
-	int getHeight();// получить высоту игровой сущности 
-	String getImagePath();// получить путь к картинке игровой сущности
-	String getName();// получить имя 
+	void setPosition(Vector2f position); 
+	void setTextureRect(IntRect rect); 
+	void setWidth(int width);
+	void setHeight(int height); 
+	void setImagePath(String imagePath); 
+	void setName(String name);
+	Vector2f getPosition(); 
+	Sprite getSprite();
+	int getWidth();
+	int getHeight(); 
+	String getImagePath();
+	String getName(); 
 };

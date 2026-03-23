@@ -1,46 +1,46 @@
 #include "Camera.h" 
 void Camera::init() {
 
-	view.reset(sf::FloatRect(0, 0, 800, 500));//начальные настройки 
+	view.reset(sf::FloatRect(0, 0, 800, 500)); 
 } 
 
 Camera::Camera(Player* player) {
 
-	this->player = player;//задаём игрока
+	this->player = player;
 
-	init();//задаём начальные настройки камеры 
+	init(); 
 
 }
 
 void Camera::setCenter() {
-	int playerX = player->getPosition().x;//получим координату игрока по оси x.
+	int playerX = player->getPosition().x; 
 
-	int playerY = player->getPosition().y;//получим координату игрока по оси y 
+	int playerY = player->getPosition().y;  
 
-	if (playerX < LEFT_BORDER) {// настраиваем границу слева 
+	if (playerX < LEFT_BORDER) { 
 
 		playerX = LEFT_BORDER;
 
 	}
-	if (playerX > RIGHT_BORDER) {// настраиваем границу справа 
+	if (playerX > RIGHT_BORDER) { 
 
 		playerX = RIGHT_BORDER;
 
 	}
 
-	if (playerY < UP_BORDER) {// настраиваем границу сверху
+	if (playerY < UP_BORDER) {
 
 		playerY = UP_BORDER;
 
 	}
 
-	if (playerY > DOWN_BORDER) {// настраиваем границу снизу
+	if (playerY > DOWN_BORDER) {
 
 		playerY = DOWN_BORDER;
 
 	}
 
-	view.setCenter(playerX, playerY);// задаём координату центра камеры
+	view.setCenter(playerX, playerY);
 }
 
 void Camera::update() {

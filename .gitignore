@@ -1,0 +1,25 @@
+# Скомпилированные файлы
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Папки сборки
+build/
+cmake-build-*/
+
+# IDE
+.vscode/
+.idea/
+.vs/
+*.swp
+
+# Артефакты CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+# Файлы зависимости (если используете vcpkg, conan и т.п.)
+vcpkg_installed/
